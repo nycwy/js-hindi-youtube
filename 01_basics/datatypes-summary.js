@@ -58,3 +58,31 @@ const myFunction = function () {
 
 note: datatype of all non primitive types is "object" except function, return type of function is "object function"
 */
+
+
+// ++++++++++++++++++++++++++++++++++++++++ (Memory allocation) ++++++++++++++++++++++++++++++++++++++++
+
+// Stack (Primitive): copy of the value is passed, Heap (Non-Primitive): copy of the reference is passed (not the actual object).
+
+// Stack(Primitive)
+let userOne = "santoshkhatri"
+
+let anotherUser = userOne
+// console.log(anotherUser)
+
+anotherUser = "santatimilsina"
+
+console.log(userOne)
+console.log(anotherUser)
+
+// Heap (Non-Primitive)
+let user1 = {
+    email: "user@google.com",
+    upi: "user@ybl",
+}
+
+let user2 = user1
+
+user2.email = "santosh@google.com"
+console.log(user1.email)
+console.log(user2.email)
